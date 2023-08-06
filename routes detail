@@ -1,0 +1,53 @@
+admin 
+d34ea505ff1d70c0bebb3cc8f71940d21c62927ed00c992cd7300b33edfcf586e0528806eae3902f2eb5f87584a61c85307f58f7de1eada087f275fe46824b0aba4c0935256f9e44de9cc68f00e84a7b7fdded01b6b40ea36c8e9d6ce250065084a8e37841654cb769abdf4829c73e5d34458e7110d2f9f1d4267019694e80dc
+
+designer
+703058f58338e4fedcefea283a7131fac7da1318efa83c5da65cdbd33baca287b4c66a2e0c3a8e36cbc829b26bdd41fd7bd943a0d26fa22336fd4e76a91ea8fe78e3fc6bd5263e25baceb331a5d4b42560a9aa39f2050144c5b6478c879b53f406b514fe0465833327a59c961068eedc5babeadcdbfd06ca2c604494c65b664b
+
+costumer
+3002f19e63171c46db260f22f527a7751a8b1b37305b8d3770066f12716f45dac3cc666ab12236ea8105841c52bf5f8b941d2aa0f1d6b672906f3cf3140bd80e0c5d3ce8b0303e8bc533890d27e78e3ac352554b95f678a8903d316c2630d8dc78db736c0552ace984fde9a38314590d5dff783ed980e56a0f64dba4e04b64ba
+
+============================USER==================================
+
+POST = localhost:1337/api/auth/local/register == for register user (every admin, customer and designer must need to regiter in User)
+POST = localhost:1337/api/auth/local == for login User (every admin, customer and designer must need to login in that route)
+
+----------------------admin-----------------------------
+POST = localhost:1337/api/admins == for register admin 
+GET = localhost:1337/api/admins == for find all admins
+GET = localhost:1337/api/admins/:id == for find one admin
+
+---------------------customer----------------------------
+POST = localhost:1337/api/customers == for register customer
+GET = localhost:1337/api/customer == for find all customer
+GET = localhost:1337/api/customer/:id == for find one customer
+
+---------------------Designer-------------------------
+POST = localhost:1337/api/customers == for register customer
+GET = localhost:1337/api/customer == for find all customer
+GET = localhost:1337/api/customer/:id == for find one customer
+
+===========================ORDER=======================================
+
+----------------------digitizing----------------------------
+POST = http://localhost:1337/api/digitizings == for creating a digitizing order
+GET = http://localhost:1337/api/digitizings == for find all digitizing order
+GET = http://localhost:1337/api/digitizings/:id == for find one digitizing order
+
+----------------------vectors----------------------------
+POST = http://localhost:1337/api/vectors == for creating a vectors order
+GET = http://localhost:1337/api/vectors == for find all vectors order
+GET = http://localhost:1337/api/vectors/:id == for find one vectors order
+
+----------------------graphic-designs----------------------------
+POST = http://localhost:1337/api/graphic-designs == for creating a graphic-designs order
+GET = http://localhost:1337/api/graphic-designs == for find all graphic-designs order
+GET = http://localhost:1337/api/graphic-designs/:id == for find one graphic-designs order
+
+---------------------------order-------------------------------------
+POST = localhost:1337/api/orders == for creating an order form admin 
+GET = localhost:1337/api/orders == for find All order form admin 
+PUT = localhost:1337/api/orders/:id == for adding a SOURCEFILE form designer
+PUT = localhost:1337/api/orders/:id == for adding price form admin
+
+--------------------------paymen--------------------------------

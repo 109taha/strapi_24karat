@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "designer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::designer.designer"
+    },
+    "orderStatus": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "In-process",
+        "completed",
+        "cancelled"
+      ],
+      "required": true
+    },
+    "orderType": {
+      "type": "enumeration",
+      "enum": [
+        "digitizing",
+        "vector",
+        "graphicDesign"
+      ],
+      "required": true
+    },
+    "SourceFile": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "prices": {
+      "type": "decimal"
+    },
+    "customer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer.customer",
+      "inversedBy": "order"
+    },
+    "digitizing": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::digitizing.digitizing"
+    },
+    "graphic_design": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::graphic-design.graphic-design"
+    },
+    "vector": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vector.vector"
+    }
+  }
+}

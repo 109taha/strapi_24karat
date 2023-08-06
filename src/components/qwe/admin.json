@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_qwe_admins",
+  "info": {
+    "displayName": "Admin",
+    "icon": "envelop"
+  },
+  "options": {},
+  "attributes": {
+    "admin": {
+      "type": "string"
+    }
+  }
+}

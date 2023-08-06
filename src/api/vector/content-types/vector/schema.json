@@ -1,0 +1,112 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vectors",
+  "info": {
+    "singularName": "vector",
+    "pluralName": "vectors",
+    "displayName": "Vector",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "customer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer.customer"
+    },
+    "DesignName": {
+      "type": "string",
+      "required": true
+    },
+    "NumberOfColors": {
+      "type": "integer",
+      "required": true
+    },
+    "NameOfColors": {
+      "type": "string",
+      "required": true
+    },
+    "Height": {
+      "type": "string",
+      "required": true
+    },
+    "Width": {
+      "type": "string",
+      "required": true
+    },
+    "Unit": {
+      "type": "enumeration",
+      "enum": [
+        "Inches",
+        "Mm",
+        "Cm"
+      ],
+      "required": true
+    },
+    "whatWillYouUseIfFor": {
+      "type": "enumeration",
+      "enum": [
+        "Screen Printing",
+        "Direct To Garment",
+        "Sublimation",
+        "Vinyl Cutting",
+        "Laser Engraving",
+        "Denim",
+        "Sand Blasting",
+        "Diamond Drag Engraving",
+        "Other"
+      ],
+      "required": true
+    },
+    "colorScheme": {
+      "type": "enumeration",
+      "enum": [
+        "Black & White",
+        "Black & White With Halftones",
+        "Spot Color With NO Halftones",
+        "Spot Color With Halftones",
+        "Others"
+      ],
+      "required": true
+    },
+    "designFormate": {
+      "type": "enumeration",
+      "enum": [
+        ".ai",
+        ".pdf",
+        ".crd",
+        ".eps",
+        ".psd",
+        ".svg",
+        "Other"
+      ],
+      "required": true
+    },
+    "timeFrame": {
+      "type": "enumeration",
+      "enum": [
+        "Normal turn-around",
+        "Urgent turn-around: {1-12 hours}, addition 5$"
+      ],
+      "required": true
+    },
+    "additionalInstructions": {
+      "type": "string",
+      "required": true
+    },
+    "attachArtwork": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

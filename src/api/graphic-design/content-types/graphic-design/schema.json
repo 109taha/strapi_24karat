@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "graphic_designs",
+  "info": {
+    "singularName": "graphic-design",
+    "pluralName": "graphic-designs",
+    "displayName": "GraphicDesign",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "customer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer.customer",
+      "inversedBy": "graphic_design"
+    },
+    "DesignIdea": {
+      "type": "string",
+      "required": true
+    },
+    "NumberOfColors": {
+      "type": "integer",
+      "required": true
+    },
+    "NameOfColors": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Logo",
+        "Banner",
+        "Visiting Card",
+        "Letter Head",
+        "Stationery",
+        "Penaflex",
+        "Other"
+      ],
+      "required": true
+    },
+    "timeFrame": {
+      "type": "enumeration",
+      "enum": [
+        "normal turn-around",
+        "urgent turn-around: {1-12 hours}, addition 5$"
+      ],
+      "required": true
+    },
+    "additionalInstructions": {
+      "type": "string",
+      "required": true
+    },
+    "attachArtwork": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
